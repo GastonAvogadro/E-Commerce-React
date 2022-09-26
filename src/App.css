@@ -20,6 +20,14 @@ a {
     font-size: 1.15em;
 }
 
+.menu li a{
+    color: rgb(78, 77, 77);
+}
+
+.menu li a:hover{
+    color: black;
+}
+
 .navBar {
     height: 10vh;
     background-color: rgb(227, 238, 238);
