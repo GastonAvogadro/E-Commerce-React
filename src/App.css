@@ -12,8 +12,9 @@
 }
 
 .menu {
-    
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     gap: 2em;
     font-size: 1.15em;
