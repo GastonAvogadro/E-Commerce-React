@@ -1,31 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
 #root{
     font-family: 'Nunito', sans-serif;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    gap: 2em;
-    font-size: 1.15em;
-}
-
-.menu li a{
-    color: rgb(78, 77, 77);
-}
-
-.menu li a:hover{
-    color: black;
 }
 
 .navBar {
@@ -35,6 +9,23 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.menu {
+    
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    font-size: 1.15em;
+}
+
+.menu li a{
+    color: rgb(78, 77, 77);
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: black;
 }
 
 .cartWidget{
@@ -57,4 +48,12 @@ a {
 
 .greeting{
     margin: 2rem;
+}
+
+.itemCount{
+    margin: 2rem;
+}
+
+.itemCount button{
+    width: 2rem;
 }

@@ -1,9 +1,7 @@
-import cartIcon from '../img/carrito.png';
-
-export const Cart = () => {
+export const CartWidget = () => {
     return (
         <>
-            <img src={cartIcon} className='cartIcon' alt='cart icon' />
+            <img src='./assets/img/carrito.png' className='cartIcon' alt='cart icon' />
             <p className='cartNumber'>0</p>
         </>
     );

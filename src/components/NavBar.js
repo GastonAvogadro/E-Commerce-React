@@ -1,4 +1,4 @@
-import { Cart } from './CartWidget';
+import { CartWidget } from './CartWidget';
 
 const Brand = () => {
     return <h1>RandomExistence</h1>;
@@ -29,11 +29,11 @@ export const NavBar = () => {
             <div className="brand">
                 <Brand />
             </div>
-            <div>
-                <MenuLinks />
-            </div>
+
+            <MenuLinks />
+
             <div className="cartWidget">
-                <Cart />
+                <CartWidget />
             </div>
         </>
     );
