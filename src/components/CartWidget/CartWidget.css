@@ -1,0 +1,23 @@
+.cartWidget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartWidget p {
+    padding: 0;
+    margin: 0;
+}
+
+.cartIcon {
+    width: 2rem;
+    margin: 0.4rem;
+}
+
+.cartNumber {
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    text-align: center;
+}

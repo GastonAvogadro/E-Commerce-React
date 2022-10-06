@@ -1,60 +1,16 @@
-#root{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
     font-family: 'Nunito', sans-serif;
-}
-
-.navBar {
-    height: 10vh;
-    background-color: rgb(227, 238, 238);
-    border-bottom: 1px solid rgb(207, 208, 208);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 2em;
-    font-size: 1.15em;
-}
-
-.menu li a{
-    color: rgb(78, 77, 77);
-    text-decoration: none;
-}
-
-.menu li a:hover{
-    color: black;
-}
-
-.cartWidget{
-    display: flex;
-    align-items: center; 
-}
-
-.cartIcon{
-    width: 2rem;
-    margin: 0.4rem;
-}
-
-.cartNumber{
-    width: 1.2rem;
-    border-radius: 50%;
-    background-color: rgb(58, 58, 58);
-    color: white;
-    text-align: center;
-}
-
-.greeting{
-    margin: 2rem;
-}
-
-.itemCount{
-    margin: 2rem;
-}
-
-.itemCount button{
-    width: 2rem;
 }

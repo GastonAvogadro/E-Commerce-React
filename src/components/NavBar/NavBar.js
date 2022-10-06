@@ -1,4 +1,5 @@
-import { CartWidget } from './CartWidget';
+import { CartWidget } from '../CartWidget/CartWidget';
+import './NavBar.css'
 
 const Brand = () => {
     return <h1>RandomExistence</h1>;

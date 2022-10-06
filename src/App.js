@@ -1,5 +1,6 @@
-import { NavBar } from './components/NavBar.js';
-import { ItemListContainer } from './components/ItemListContainer.js';
+import { NavBar } from './components/NavBar/NavBar'
+import { ItemListContainer } from './components/Pages/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/Pages/ItemDetailContainer/ItemDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
             </header>
             <main className="main">
                 <ItemListContainer greeting="Bienvenido/a a RandomExistence! Un lugar con diseños creativos y únicos" />
+                <ItemDetailContainer />
             </main>
         </>
     );

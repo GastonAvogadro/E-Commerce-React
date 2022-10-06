@@ -11,3 +11,11 @@ export const gFetch = () => {
         }, 2000);
     });
 };
+
+export const gFetch2 = () => {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res(products.filter(product => product.id === '1'));
+        }, 2000);
+    });
+};
