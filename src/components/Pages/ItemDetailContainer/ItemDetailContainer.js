@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
         gFetch().then((res) => setProduct(res.find((product) => product.id === idProduct)));
     });
 
-    return (
+    const mostrarContenido = (
         <section className="itemDetailContainer container">
             <ItemDetail
                 id={product.id}
@@ -24,4 +24,6 @@ export const ItemDetailContainer = () => {
             />
         </section>
     );
+
+    return product.id ? mostrarContenido : 'Cargando...';
 };
