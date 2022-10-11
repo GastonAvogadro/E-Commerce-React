@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         gFetch().then((res) => setProduct(res.find((product) => product.id === idProduct)));
-    }, [idProduct]);
+    });
 
     return (
         <section className="itemDetailContainer container">
