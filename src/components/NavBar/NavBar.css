@@ -16,11 +16,11 @@
     font-size: 1.15em;
 }
 
-.menu li a {
+.menu a{
     color: rgb(78, 77, 77);
     text-decoration: none;
 }
 
-.menu li a:hover {
+.menu a:hover {
     color: black;
 }

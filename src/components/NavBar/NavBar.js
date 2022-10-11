@@ -1,24 +1,22 @@
+import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
-import './NavBar.css'
+import './NavBar.css';
 
 const Brand = () => {
-    return <h1>RandomExistence</h1>;
+    return <Link to="/">RandomExistence</Link>;
 };
 
 const MenuLinks = () => {
     return (
         <ul className="menu">
             <li>
-                <a href="#">Sillas</a>
+                <Link to="/category/sillas">Sillas</Link>
             </li>
             <li>
-                <a href="#">Sillones</a>
+                <Link to="/category/sillones">Sillones</Link>
             </li>
             <li>
-                <a href="#">Camas</a>
-            </li>
-            <li>
-                <a href="#">Escritorios</a>
+                <Link to="/category/camas">Camas</Link>
             </li>
         </ul>
     );
@@ -26,7 +24,7 @@ const MenuLinks = () => {
 
 export const NavBar = () => {
     return (
-        <>
+        <header className="navBar">
             <div className="brand">
                 <Brand />
             </div>
@@ -36,6 +34,6 @@ export const NavBar = () => {
             <div className="cartWidget">
                 <CartWidget />
             </div>
-        </>
+        </header>
     );
 };
