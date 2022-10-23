@@ -3,20 +3,23 @@ import { CartWidget } from '../CartWidget/CartWidget';
 import './NavBar.css';
 
 const Brand = () => {
-    return <Link to="/">RandomExistence</Link>;
+    return <Link to="/">LeatherLife</Link>;
 };
 
 const MenuLinks = () => {
     return (
         <ul className="menu">
             <li>
-                <Link to="/category/sillas">Sillas</Link>
+                <Link to="/category/camperas">Camperas</Link>
             </li>
             <li>
-                <Link to="/category/sillones">Sillones</Link>
+                <Link to="/category/zapatos">Zapatos</Link>
             </li>
             <li>
-                <Link to="/category/camas">Camas</Link>
+                <Link to="/category/cinturones">Cinturones</Link>
+            </li>
+            <li>
+                <Link to="/category/billeteras">Billeteras</Link>
             </li>
         </ul>
     );

@@ -8,6 +8,6 @@ export const gFetch = () => {
     return new Promise((res, rej) => {
         setTimeout(() => {
             res(products);
-        }, 2000);
+        }, 0);
     });
 };
