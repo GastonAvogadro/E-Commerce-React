@@ -1,10 +1,14 @@
 .navBar {
     height: 10vh;
-    background-color: rgb(227, 238, 238);
+    background-color: #f5f5f5;
     border-bottom: 1px solid rgb(207, 208, 208);
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.brandLogo{
+    width: 8rem;
 }
 
 .menu {
@@ -17,10 +21,11 @@
 }
 
 .menu a{
-    color: rgb(78, 77, 77);
+    color: black;
     text-decoration: none;
 }
 
 .menu a:hover {
     color: black;
+    border-bottom: 2px solid black;
 }

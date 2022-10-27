@@ -3,23 +3,33 @@ import { CartWidget } from '../CartWidget/CartWidget';
 import './NavBar.css';
 
 const Brand = () => {
-    return <Link to="/">LeatherLife</Link>;
+    return (
+        <Link to="/">
+            <div className="brand">
+                <img
+                    src="https://i.ibb.co/XLMPmJj/leather-Life-Icon.png"
+                    className="brandLogo"
+                    alt="Leather Life"
+                ></img>
+            </div>
+        </Link>
+    );
 };
 
 const MenuLinks = () => {
     return (
         <ul className="menu">
             <li>
-                <Link to="/category/camperas">Camperas</Link>
+                <Link to="/category/camperas">CAMPERAS</Link>
             </li>
             <li>
-                <Link to="/category/zapatos">Zapatos</Link>
+                <Link to="/category/zapatos">ZAPATOS</Link>
             </li>
             <li>
-                <Link to="/category/cinturones">Cinturones</Link>
+                <Link to="/category/cintos">CINTOS</Link>
             </li>
             <li>
-                <Link to="/category/billeteras">Billeteras</Link>
+                <Link to="/category/billeteras">BILLETERAS</Link>
             </li>
         </ul>
     );
@@ -28,15 +38,9 @@ const MenuLinks = () => {
 export const NavBar = () => {
     return (
         <header className="navBar">
-            <div className="brand">
-                <Brand />
-            </div>
-
+            <Brand />
             <MenuLinks />
-
-            <div className="cartWidget">
-                <CartWidget />
-            </div>
+            <CartWidget />
         </header>
     );
 };

@@ -11,6 +11,10 @@ ul {
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 #root {
     font-family: 'Nunito', sans-serif;
 }

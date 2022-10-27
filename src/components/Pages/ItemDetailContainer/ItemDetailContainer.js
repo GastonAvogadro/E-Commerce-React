@@ -1,6 +1,6 @@
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { gFetch } from '../../Helpers/gFecth';
 import { ItemDetail } from '../../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 
@@ -9,11 +9,15 @@ export const ItemDetailContainer = () => {
     const { idProduct } = useParams();
 
     useEffect(() => {
-        gFetch().then((res) => setProduct(res.find((product) => product.id === idProduct)));
-    });
+        const db = getFirestore();
+        const queryDoc= doc(db, 'products', idProduct);
+        getDoc(queryDoc)
+            .then((resp) => setProduct({ id: resp.id, ...resp.data() }))
+            .catch((err) => console.log(err));
+    }, [idProduct]);
 
     return product.id ? (
-        <section className="itemDetailContainer container">
+        <section className="container">
             <ItemDetail product={product} />
         </section>
     ) : (
