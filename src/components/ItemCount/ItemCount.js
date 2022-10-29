@@ -18,18 +18,18 @@ export const ItemCount = ({ stock, onAdd }) => {
             {handleAdd ? (
                 <>
                     <Link to={'/'}>
-                        <button>Seguir Comprando</button>
+                        <button className='btnKeepBuying'>Seguir Comprando</button>
                     </Link>
                     <Link to={'/cart'}>
-                        <button>Ir al carrito</button>
+                        <button className='btnGoToCart'>Ir al carrito</button>
                     </Link>
                 </>
             ) : (
                 <>
-                    <p>Cantidad {count}</p>
-                    <button onClick={removeCount}>-</button>
-                    <button onClick={addCount}>+</button>
-                    <button onClick={addToCart}>Agregar al carrito</button>
+                    <button className='btnHandleCount' onClick={removeCount}><p>-</p></button>
+                    <p className='numCount'>{count}</p>
+                    <button className='btnHandleCount' onClick={addCount}><p>+</p></button>
+                    <button className='btnAddToCart' onClick={addToCart}>Agregar al carrito</button>
                 </>
             )}
         </div>

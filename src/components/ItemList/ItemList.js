@@ -10,7 +10,6 @@ export const ItemList = ({ listProducts }) => {
                         key={product.id}
                         title={product.title}
                         price={product.price}
-                        stock={product.stock}
                         image={product.image}
                     />
                 ))}

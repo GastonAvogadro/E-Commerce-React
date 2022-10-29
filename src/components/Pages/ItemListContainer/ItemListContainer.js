@@ -27,7 +27,6 @@ export const ItemListContainer = () => {
     return (
         <section className="container">
             <BackgroundImg />
-            <h2>Cuero 100% legítimo</h2>
             <ItemList listProducts={products} />
         </section>
     );

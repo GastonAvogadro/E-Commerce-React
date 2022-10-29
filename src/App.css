@@ -15,6 +15,10 @@ a{
     text-decoration: none;
 }
 
+button{
+    border-style: none;
+}
+
 #root {
     font-family: 'Nunito', sans-serif;
 }
