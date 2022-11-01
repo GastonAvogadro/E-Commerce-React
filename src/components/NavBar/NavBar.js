@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
+import { Menu } from '../Menu/Menu';
 import './NavBar.css';
 
 const Brand = () => {
@@ -16,31 +18,20 @@ const Brand = () => {
     );
 };
 
-const MenuLinks = () => {
-    return (
-        <ul className="menu">
-            <li>
-                <Link to="/category/camperas">CAMPERAS</Link>
-            </li>
-            <li>
-                <Link to="/category/zapatos">ZAPATOS</Link>
-            </li>
-            <li>
-                <Link to="/category/cintos">CINTOS</Link>
-            </li>
-            <li>
-                <Link to="/category/billeteras">BILLETERAS</Link>
-            </li>
-        </ul>
-    );
-};
-
 export const NavBar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpen = () => {
+        if (window.innerWidth <= 768) {
+            setIsOpen(!isOpen);
+        }
+    };
+
     return (
         <header className="navBar">
             <Brand />
-            <MenuLinks />
-            <CartWidget />
+            <Menu isOpen={isOpen} handleOpen={handleOpen} />
+            <CartWidget isOpen={isOpen} handleOpen={handleOpen} />
         </header>
     );
 };

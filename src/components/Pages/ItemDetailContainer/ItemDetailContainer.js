@@ -1,26 +1,30 @@
-import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { ItemDetail } from '../../ItemDetail/ItemDetail';
-import './ItemDetailContainer.css';
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     const { idProduct } = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const db = getFirestore();
-        const queryDoc= doc(db, 'products', idProduct);
+        const queryDoc = doc(db, 'products', idProduct);
         getDoc(queryDoc)
-            .then((resp) => setProduct({ id: resp.id, ...resp.data() }))
+            .then((resp) => {
+                if (resp._document) {
+                    setProduct({ id: resp.id, ...resp.data() });
+                } else {
+                    navigate('/NotFound404');
+                }
+            })
             .catch((err) => console.log(err));
-    }, [idProduct]);
+    }, [idProduct, navigate]);
 
-    return product.id ? (
+    return (
         <section className="container">
             <ItemDetail product={product} />
         </section>
-    ) : (
-        'Cargando...'
     );
 };

@@ -23,7 +23,7 @@ export const BackgroundImg = () => {
     else if (location.pathname === '/cart') {
         url = (cartList.length === 0 ? 'https://i.ibb.co/sQJXR8p/cat-empty.jpg' : 'https://i.ibb.co/kyzxJDB/suitcase-closed.jpg');
     }
-    else if (location.pathname === '/') {
+    else if (location.pathname === '/' || location.pathname === '/NotFound404') {
         url = 'https://i.ibb.co/yR2d0BH/nature-boots.jpg';
     }
     return (

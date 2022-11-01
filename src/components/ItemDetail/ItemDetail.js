@@ -9,7 +9,8 @@ export const ItemDetail = ({ product }) => {
     };
 
     return (
-        <div className="card mb-3" id='itemDetail'>
+        
+        <div className="card mb-3" id="itemDetail">
             <div className="row g-0">
                 <div className="col-md-4">
                     <img src={product.image} className="img-fluid rounded-start" alt={product.title} />

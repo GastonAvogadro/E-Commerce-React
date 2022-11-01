@@ -1,0 +1,93 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+    font-size: 1.15em;
+    display: none;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.open {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.901);
+    z-index: 1;
+    top: 0;
+}
+
+/* ---------- Toggle Menu ------------ */
+
+.bar {
+    position: fixed;
+    right: 1rem;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    z-index: 2;
+}
+
+.bar span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: rgb(27, 27, 27);
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.2s ease;
+    left: 0;
+}
+
+.bar .top {
+    top: 0;
+}
+
+.bar .middle {
+    top: 17px;
+}
+
+.bar .bottom {
+    bottom: 0;
+}
+
+span.topChecked {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+}
+
+span.bottomChecked {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px !important;
+    box-shadow: 0 0 10px #495057;
+}
+
+span.middleChecked {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+@media (min-width: 768px) {
+    .bar {
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+}
