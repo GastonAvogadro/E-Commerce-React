@@ -1,8 +1,9 @@
-.itemListCard {
+#itemListCard {
+    width: 16rem;
     margin: 1rem;
     color: black;
 }
-.itemListCard .card-body {
+#itemListCard .card-body {
     color: black;
     text-align: center;
 }

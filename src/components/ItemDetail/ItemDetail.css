@@ -1,4 +1,11 @@
-#itemDetail{
+#itemDetail {
     background-color: #f5f5f5;
     margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    #itemDetail img {
+        width: 100%;
+    }
+    
 }

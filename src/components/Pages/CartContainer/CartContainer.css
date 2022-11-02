@@ -7,6 +7,10 @@
     border-radius: 0.5rem;
 }
 
+.cartCard {
+    padding-top: 2rem;
+}
+
 .cartImg {
     display: flex;
     justify-content: center;
@@ -16,6 +20,17 @@
 .cartImg img {
     width: 10rem;
 }
+
+.totalPrice {
+    padding: 2rem 0;
+}
+
+.totalPrice p {
+    font-size: 1.7em;
+    margin-bottom: 1rem;
+}
+
+/* ------- MODAL ------- */
 
 .overlay {
     display: block;
@@ -27,13 +42,14 @@
     left: 0;
     z-index: 999;
 }
+
 .modal__locked {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
-    height: 28%;
+    width: 80%;
+    height: 38%;
     background: white;
     border-radius: 20px;
     text-align: center;
@@ -57,4 +73,18 @@
     height: 3rem;
     font-size: 1.2em;
     border-radius: 0.5rem;
+}
+
+@media (min-width: 614px) {
+    .modal__locked {
+        width: 60%;
+        height: 32%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .modal__locked {
+        width: 50%;
+        height: 28%;
+    }
 }

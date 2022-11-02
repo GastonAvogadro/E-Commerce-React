@@ -71,7 +71,7 @@ export const OrderForm = ({ setOrderId, setFormSent }) => {
             }}
         >
             {({ errors }) => (
-                <Form className="orderForm">
+                <Form className="orderForm" id='orderForm'>
                     <div>
                         <label htmlFor="name">Nombre</label>
                         <Field type="text" id="name" name="name" placeholder="nombre y apellido" />

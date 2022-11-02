@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Pulsar } from '@uiball/loaders';
 import { BackgroundImg } from '../../BackgroundImg/BackgroundImg';
 import { useCartContext } from '../../../context/CartContext';
 import { OrderForm } from '../../OrderForm/OrderForm';
@@ -17,9 +18,20 @@ export const CartContainer = () => {
             <>
                 <div className="overlay">
                     <div className="modal__locked">
-                        <h4>Se ha enviado un correo con su número de orden</h4>
-                        <p>Número de orden: {orderId}</p>
-                        <button onClick={closeModal}>Aceptar</button>
+                        {orderId ? (
+                            <>
+                                <h4>Se ha enviado un correo con su número de orden</h4>
+                                <p>Número de orden: {orderId}</p>
+                                <button onClick={closeModal}>Aceptar</button>
+                            </>
+                        ) : (
+                            <>
+                                <p>Generando orden</p>
+                                <div className="d-flex justify-content-center mt-4">
+                                    <Pulsar size={100} color="#231F20" />
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </>
@@ -42,7 +54,7 @@ export const CartContainer = () => {
                 ) : (
                     <div className="cartFull row">
                         {cartList.map((product) => (
-                            <div className="col-6" key={product.id}>
+                            <div className="col-12 cartCard" key={product.id}>
                                 <div className="card">
                                     <div className="row g-0">
                                         <div className="cartImg col-md-4">
@@ -67,11 +79,13 @@ export const CartContainer = () => {
                                 </div>
                             </div>
                         ))}
-                        <div>
+                        <div className="totalPrice">
                             <p>Precio total = $ {cartTotalPrice()}</p>
                             <button onClick={emptyCart}>Vaciar carrito</button>
                         </div>
-                        <OrderForm setOrderId={setOrderId} setFormSent={setFormSent} />
+                        <div className="orderFormContainer">
+                            <OrderForm setOrderId={setOrderId} setFormSent={setFormSent} />
+                        </div>
                     </div>
                 )}
             </div>

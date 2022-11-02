@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Menu.css';
 
-export const Menu = ({isOpen, handleOpen}) => {
-
+export const Menu = ({ isOpen, handleOpen }) => {
     return (
         <>
             <div onClick={handleOpen} className="bar">
