@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Menu.css';
 
 export const Menu = ({ isOpen, handleOpen }) => {
@@ -12,24 +12,24 @@ export const Menu = ({ isOpen, handleOpen }) => {
 
             <ul className={`menu ${isOpen ? 'open' : ''}`}>
                 <li>
-                    <Link to="/category/camperas" onClick={handleOpen}>
+                    <NavLink to="/category/camperas" onClick={handleOpen}>
                         CAMPERAS
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/category/zapatos" onClick={handleOpen}>
+                    <NavLink to="/category/zapatos" onClick={handleOpen}>
                         ZAPATOS
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/category/cintos" onClick={handleOpen}>
+                    <NavLink to="/category/cintos" onClick={handleOpen}>
                         CINTOS
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/category/billeteras" onClick={handleOpen}>
+                    <NavLink to="/category/billeteras" onClick={handleOpen}>
                         BILLETERAS
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </>

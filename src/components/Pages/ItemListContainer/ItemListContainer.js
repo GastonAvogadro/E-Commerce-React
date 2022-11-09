@@ -32,7 +32,7 @@ export const ItemListContainer = () => {
             <BackgroundImg />
             {loading ? (
                 <div className='d-flex justify-content-center mt-4'>
-                    <Pulsar size={100} color="#231F20" />
+                    <Pulsar size={100} color="#C5C7CA" />
                 </div>
             ) : (
                 <ItemList listProducts={products} />

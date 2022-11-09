@@ -22,3 +22,18 @@ button{
 #root {
     font-family: 'Nunito', sans-serif;
 }
+
+body{
+    background-color: #1f1f1f;
+}
+
+section{
+    position: relative;
+    top: 10vh;
+}
+
+@media (min-width: 768px){
+    section{
+        top: 0;
+    }
+}

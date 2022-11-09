@@ -46,10 +46,16 @@ export const CartContainer = () => {
 
                 {cartList.length === 0 ? (
                     <div className="cartEmpty">
-                        <p>No hay productos por acá!</p>
-                        <Link to={'/'}>
-                            <button>Ver productos</button>
-                        </Link>
+                        <div className="col-12 cartCard">
+                            <div className="card">
+                                <div className="card-body">
+                                    <p>No hay productos por acá!</p>
+                                    <Link to={'/'}>
+                                        <button>Ver productos</button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ) : (
                     <div className="cartFull row">
@@ -66,12 +72,14 @@ export const CartContainer = () => {
                                         </div>
                                         <div className="col-md-8">
                                             <div className="card-body">
-                                                <h3 className="card-title">{product.title}</h3>
+                                                <h5 className="card-title">{product.title}</h5>
                                                 <p className="card-text">{product.description}</p>
                                                 <p>Cantidad: {product.quantity}</p>
-                                                <p>Precio = ${product.price * product.quantity}</p>
+                                                <p className="itemPrice">
+                                                    Precio = ${product.price * product.quantity}
+                                                </p>
                                             </div>
-                                            <div>
+                                            <div className='removeItem'>
                                                 <button onClick={() => removeItem(product.id)}>Eliminar</button>
                                             </div>
                                         </div>
@@ -79,11 +87,14 @@ export const CartContainer = () => {
                                 </div>
                             </div>
                         ))}
-                        <div className="totalPrice">
-                            <p>Precio total = $ {cartTotalPrice()}</p>
+                        <div className="cleanCart">
                             <button onClick={emptyCart}>Vaciar carrito</button>
                         </div>
+                        <div className="totalPrice">
+                            <p>Precio total = $ {cartTotalPrice()}</p>
+                        </div>
                         <div className="orderFormContainer">
+                            <h4>Orden de compra</h4>
                             <OrderForm setOrderId={setOrderId} setFormSent={setFormSent} />
                         </div>
                     </div>

@@ -1,32 +1,88 @@
+/* ------- CART EMPTY ------- */
+
+.cartEmpty .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+}
+
 .cartEmpty p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
 }
 
 .cartEmpty button {
     width: 6rem;
     border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.cartEmpty button:hover {
+    background-color: rgb(193, 193, 193);
+    transition: 0.4s;
 }
 
 .cartCard {
     padding-top: 2rem;
 }
 
+/* ------- CART FULL ------- */
+
+.cartFull .col-md-8 {
+    background-color: #ededed;
+}
+
+.cartFull h5 {
+    font-weight: 300;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.removeItem{
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+}
+
+.removeItem button {
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2em;
+}
+
+.removeItem button:hover, .cleanCart button:hover {
+    background-color: rgb(193, 193, 193);
+    transition: .4s;
+}
+
 .cartImg {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #C5C7CA;
 }
 
 .cartImg img {
     width: 10rem;
 }
 
+.cleanCart button {
+    margin-top: 1.5rem;
+    font-size: 1.15em;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
 .totalPrice {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
+    color: white;
 }
 
 .totalPrice p {
-    font-size: 1.7em;
+    font-size: 1.3em;
     margin-bottom: 1rem;
 }
 
@@ -75,10 +131,20 @@
     border-radius: 0.5rem;
 }
 
+/* ------- MEDIA QUERIES ------- */
+
 @media (min-width: 614px) {
     .modal__locked {
         width: 60%;
         height: 32%;
+    }
+}
+
+@media (min-width: 768px) {
+    .cartEmpty .card-body {
+        flex-direction: row;
+        gap: 2rem;
+        height: 8rem;
     }
 }
 
