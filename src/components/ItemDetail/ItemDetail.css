@@ -1,12 +1,13 @@
 #itemDetail {
     background-color: #ededed;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+    margin: 3rem 0;
 }
 
 #itemDetail img {
     border-radius: 0.5rem;
     width: 100%;
+    height: 100%;
 }
 
 .itemDetailText h5{
@@ -23,5 +24,6 @@
 @media (min-width: 768px) {
     #itemDetail {
         padding-bottom: 0;
+        margin: 3rem;
     }
 }

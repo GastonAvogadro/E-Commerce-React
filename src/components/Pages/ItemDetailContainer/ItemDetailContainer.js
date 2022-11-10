@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Pulsar } from '@uiball/loaders';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { ItemDetail } from '../../ItemDetail/ItemDetail';
+import './ItemDetailContainer.css';
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
@@ -26,7 +27,7 @@ export const ItemDetailContainer = () => {
     }, [idProduct, navigate]);
 
     return (
-        <section className="container">
+        <section className="container itemDetailContainer">
             {loading ? (
                 <div className="d-flex justify-content-center mt-4">
                     <Pulsar size={100} color="#C5C7CA" />

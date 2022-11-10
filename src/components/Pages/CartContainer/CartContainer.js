@@ -15,7 +15,7 @@ export const CartContainer = () => {
         const closeModal = () => setFormSent(false);
 
         return (
-            <>
+            <section>
                 <div className="overlay">
                     <div className="modal__locked">
                         {orderId ? (
@@ -34,7 +34,7 @@ export const CartContainer = () => {
                         )}
                     </div>
                 </div>
-            </>
+            </section>
         );
     };
 
