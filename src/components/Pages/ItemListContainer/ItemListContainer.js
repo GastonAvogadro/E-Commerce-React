@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Pulsar } from '@uiball/loaders';
+import { motion } from 'framer-motion';
+import { AnimatedPage } from '../../AnimatedPage/AnimatedPage';
 import { BackgroundImg } from '../../BackgroundImg/BackgroundImg';
 import { ItemList } from '../../ItemList/ItemList';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
@@ -28,15 +30,23 @@ export const ItemListContainer = () => {
     }, [idCategory]);
 
     return (
-        <section className="container-xxl">
-            <BackgroundImg />
-            {loading ? (
-                <div className='d-flex justify-content-center mt-4'>
-                    <Pulsar size={100} color="#C5C7CA" />
-                </div>
-            ) : (
-                <ItemList listProducts={products} />
-            )}
-        </section>
+        <AnimatedPage>
+            <section className="container-xxl">
+                <BackgroundImg />
+                {loading ? (
+                    <div className="d-flex justify-content-center mt-5">
+                        <Pulsar size={100} color="#C5C7CA" />
+                    </div>
+                ) : (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <ItemList listProducts={products} />
+                    </motion.div>
+                )}
+            </section>
+        </AnimatedPage>
     );
 };

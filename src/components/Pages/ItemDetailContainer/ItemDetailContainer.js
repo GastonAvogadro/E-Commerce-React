@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Pulsar } from '@uiball/loaders';
+import { motion } from 'framer-motion';
+import { AnimatedPage } from '../../AnimatedPage/AnimatedPage';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { ItemDetail } from '../../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
@@ -27,14 +29,22 @@ export const ItemDetailContainer = () => {
     }, [idProduct, navigate]);
 
     return (
-        <section className="container itemDetailContainer">
-            {loading ? (
-                <div className="d-flex justify-content-center mt-4">
-                    <Pulsar size={100} color="#C5C7CA" />
-                </div>
-            ) : (
-                <ItemDetail product={product} />
-            )}
-        </section>
+        <AnimatedPage>
+            <section className="container itemDetailContainer">
+                {loading ? (
+                    <div className="d-flex justify-content-center mt-4">
+                        <Pulsar size={100} color="#C5C7CA" />
+                    </div>
+                ) : (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <ItemDetail product={product} />
+                    </motion.div>
+                )}
+            </section>
+        </AnimatedPage>
     );
 };

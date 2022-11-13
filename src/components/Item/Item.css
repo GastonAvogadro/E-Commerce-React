@@ -3,11 +3,19 @@
     margin: 1rem;
     color: black;
     padding: 0 !important;
+    transition: 0.5s;
 }
+
+#itemListCard:hover {
+    transition: 0.5s;
+    transform: scale(1.02);
+    overflow: hidden;
+}
+
 #itemListCard .card-body {
     color: black;
     text-align: center;
-    background-color: #ededed
+    background-color: #ededed;
 }
 
 .itemTitle {

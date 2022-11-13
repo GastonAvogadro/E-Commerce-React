@@ -22,7 +22,7 @@ export const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOpen = () => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth < 768) {
             setIsOpen(!isOpen);
         }
     };

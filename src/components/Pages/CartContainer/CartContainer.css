@@ -51,6 +51,8 @@
     border-radius: 0.5rem;
     background-color: rgb(255, 255, 255);
     font-size: 1.2em;
+    padding: 0.5rem;
+
 }
 
 .removeItem button:hover, .cleanCart button:hover {
@@ -70,6 +72,7 @@
 }
 
 .cleanCart button {
+    padding: 0.5rem;
     margin-top: 1.5rem;
     font-size: 1.15em;
     border-radius: 0.5rem;

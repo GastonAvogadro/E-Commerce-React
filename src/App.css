@@ -13,11 +13,11 @@ ul {
     padding: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-button{
+button {
     border-style: none;
 }
 
@@ -27,17 +27,17 @@ button{
     font-family: 'Nunito', sans-serif;
 }
 
-body{
+body {
     background-color: #1f1f1f;
 }
 
-section{
+section {
     position: relative;
     top: 10vh;
 }
 
-@media (min-width: 768px){
-    section{
+@media (min-width: 768px) {
+    section {
         top: 0;
     }
 }

@@ -67,7 +67,6 @@ export const OrderForm = ({ setOrderId, setFormSent }) => {
                 createOrder(name, phone, email);
                 resetForm();
                 setFormSent(true);
-                // setTimeout(() => setFormSent(false), 5000);
             }}
         >
             {({ errors }) => (

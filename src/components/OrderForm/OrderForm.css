@@ -8,7 +8,7 @@
     margin-bottom: 2rem;
     background: #fff;
     border-radius: 5px;
-    padding: 0.5rem;
+    padding: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -49,7 +49,7 @@
 
 .orderForm button[type='submit'] {
     display: block;
-    background: #0085ff;
+    background: #494848;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     border: none;
@@ -63,11 +63,7 @@
 }
 
 .orderForm button[type='submit']:hover {
-    background: #0051ff;
-}
-
-.orderForm input[type='radio'] {
-    width: auto;
+    background: #6f6f6f;
 }
 
 @media (min-width: 768px){
