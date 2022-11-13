@@ -1,7 +1,8 @@
 # React E-commerce
-Creado con Create React App ("npm start" para la ejecución)
+https://leather-life.netlify.app/
 
-Realicé un e-commerce que muestra los distintos productos en venta y se conecta a una base de datos para generar una orden de compra.
+Creado con Create React App ("npm start" para la ejecución).
+Realicé un E-commerce que muestra los distintos productos en venta y se conecta a una base de datos para generar una orden de compra.
 
 Librerías usadas: 
 
