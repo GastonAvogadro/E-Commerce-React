@@ -1,6 +1,12 @@
-.itemList{
+.itemList {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
+    top: 1.2rem;
+}
+
+@media (min-width: 864px) {
+    .itemList {
+        top: 2rem;
+    }
 }

@@ -39,12 +39,11 @@
 .bar {
     position: fixed;
     right: 1.2rem;
-    top: 0.8rem;
     cursor: pointer;
     width: 45px;
     height: 40px;
     z-index: 2;
-}
+} 
 
 .bar span {
     position: absolute;
