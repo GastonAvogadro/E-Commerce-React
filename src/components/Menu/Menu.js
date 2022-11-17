@@ -10,7 +10,7 @@ export const Menu = ({ isOpen, handleOpen }) => {
                 <span className={`bottom ${isOpen ? 'bottomChecked' : ''}`}></span>
             </div>
 
-            <ul className={`menu ${isOpen && window.innerWidth < 768 ? 'open' : ''}`}>
+            <ul className={`menu ${isOpen ? 'open' : ''}`}>
                 <li>
                     <NavLink to="/category/camperas" onClick={handleOpen}>
                         CAMPERAS

@@ -1,7 +1,15 @@
 .menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.901);
+    z-index: 1;
+    top: 0;
+    left: 0;
     list-style: none;
     gap: 2em;
     font-size: 1.15em;
@@ -19,18 +27,10 @@
 }
 
 .open {
-    position: fixed;
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.901);
-    z-index: 1;
-    top: 0;
-    left: 0;
 }
 
-.menu .active{
+.menu .active {
     border-bottom: 1.5px solid black;
 }
 
@@ -43,7 +43,7 @@
     width: 45px;
     height: 40px;
     z-index: 2;
-} 
+}
 
 .bar span {
     position: absolute;
@@ -92,7 +92,13 @@ span.middleChecked {
     .bar {
         display: none;
     }
-    .menu{
+
+    .menu {
+        position: relative;
+        height: 100%;
+        width: 60%;
         display: flex;
+        flex-direction: row;
+        background-color: inherit;
     }
 }

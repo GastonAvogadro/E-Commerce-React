@@ -33,5 +33,8 @@
 @media (min-width: 768px) {
     .cartWidget {
         display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 }
