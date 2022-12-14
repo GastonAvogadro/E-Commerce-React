@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { AnimatedPage } from '../../AnimatedPage/AnimatedPage';
 import { BackgroundImg } from '../../BackgroundImg/BackgroundImg';
 import { ItemList } from '../../ItemList/ItemList';
-import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, limit, query, where } from 'firebase/firestore';
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -22,7 +22,8 @@ export const ItemListContainer = () => {
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false));
         } else {
-            getDocs(queryCollection)
+            const queryFilter = query(queryCollection, limit(16));
+            getDocs(queryFilter)
                 .then((resp) => setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() }))))
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false));
