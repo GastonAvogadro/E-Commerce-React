@@ -1,10 +1,20 @@
-# React E-commerce
-https://leather-life.netlify.app/
+# E-commerce Leather Jacket
 
-Creado con Create React App ("npm start" para la ejecución).
-Realicé un E-commerce que muestra los distintos productos en venta y se conecta a una base de datos para generar una orden de compra.
+E-commerce desarrollado con React que se conecta a una base de datos para hacer consulta de los productos
+y poder generar una orden de compra.
 
-Librerías usadas: 
+
+### Link al sitio
+### https://leather-life.netlify.app/
+
+### Instalación
+
+```sh
+npm install
+npm start
+```
+
+### Librerías usadas: 
 
 - Bootstrap: 5.2.1 => estilo y responsividad
 - React Router DOM 6.4.2 => navegabilidad entre las vistas del sitio
