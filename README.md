@@ -1,6 +1,8 @@
 # E-commerce Leather Jacket
 
-E-commerce desarrollado con React que se conecta a una base de datos para hacer consulta de los productos
+![leather life](http://imgfz.com/i/uvXfI6S.jpeg)
+
+E-commerce desarrollado con React que se conecta a una base de datos en Firebase para hacer la consulta de los productos
 y poder generar una orden de compra.
 
 
